@@ -12,10 +12,14 @@ import java.util.List;
 @Component
 public class MockBookDataSource implements MainBooksRepository {
 
-    List<Book> bookList=new ArrayList<>();
+    List<Book> bookList;
 
+
+
+    // adding data in list after bean created
     @PostConstruct
     public void init(){
+         bookList=new ArrayList<>();
         this.bookList.add(new Book("Spring Boot Course","Sweet Spring boot Book","Motea Aljaberi"));
         this.bookList.add(new Book("Flutter Course","Sweet Flutter Book","Motea Aljaberi"));
     }

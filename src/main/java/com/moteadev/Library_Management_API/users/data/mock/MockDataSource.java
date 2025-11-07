@@ -2,6 +2,7 @@ package com.moteadev.Library_Management_API.users.data.mock;
 
 import com.moteadev.Library_Management_API.users.data.UserRepository;
 import com.moteadev.Library_Management_API.users.model.UserModel;
+import jakarta.annotation.PostConstruct;
 import org.springframework.context.annotation.Lazy;
 import org.springframework.stereotype.Component;
 
@@ -13,9 +14,13 @@ import java.util.Objects;
 
 public class MockDataSource implements UserRepository {
 
-    private List<UserModel>userModelList=new ArrayList<>();
+    private List<UserModel>userModelList;
 
-    public MockDataSource(){
+
+    // adding data after bean created
+    @PostConstruct
+    public void init(){
+        userModelList=new ArrayList<>();
         userModelList.add(new UserModel("email1@gmail.com","12345","Ahmed","0000"));
         userModelList.add(new UserModel("email2@gmail.com","12345","Motea","0000"));
     }
