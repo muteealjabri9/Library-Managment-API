@@ -1,0 +1,318 @@
+{
+	"info": {
+		"_postman_id": "55c036ab-e65e-4786-8e09-dfe22ff86786",
+		"name": "Library_Managment_API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "32760665"
+	},
+	"item": [
+		{
+			"name": "login",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\":\"email1@gmail.com\",\r\n    \"password\":\"12345\"\r\n}"
+				},
+				"url": {
+					"raw": "localhost:8080/users/login",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"users",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "All Users",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/users/allUsers",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"users",
+						"allUsers"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Register User",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\r\n\"email\": \"email@gmail.com\",\r\n\"password\": \"12345\",\r\n\"phone\":\"00000\",\r\n\"fullName\":\"Ahmed\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/users/register",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"users",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "view all books",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/books/allbooks",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"books",
+						"allbooks"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Book",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\":\"Java Spring For Dummy\",\r\n    \"description\":\"Learn Spring boot handy Book\",\r\n    \"author\":\"Motea Ghalib\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/books/addbook",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"books",
+						"addbook"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Edit Book",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "    {\r\n        \"isbn\": \"f952e7aa-192a-49b2-bc0b-3e32e3c72a6b\",\r\n        \"title\": \"Flutter Course With Examples\",\r\n        \"description\": \"Sweet Flutter Book\",\r\n        \"author\": \"Motea Ghlib Aljaberi\"\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/books/editbook",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"books",
+						"editbook"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete book",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "    {\r\n        \"isbn\": \"f952e7aa-192a-49b2-bc0b-3e32e3c72a6b\",\r\n        \"title\": \"Flutter Course With Examples\",\r\n        \"description\": \"Sweet Flutter Book\",\r\n        \"author\": \"Motea Ghlib Aljaberi\"\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/books/deletebook",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"books",
+						"deletebook"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Loadborrows",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/borrows/loadborrows",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"borrows",
+						"loadborrows"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add Borrow",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"userId\":\"74aefb1d-6074-4657-80c6-d772fb86b722\",\r\n    \"bookId\":\"115be22c-b08c-42d6-8894-95e90b0b0c97\",\r\n    \"startDate\":\"2025-11-1\",\r\n    \"endDate\":\"2025-11-23\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/borrows/addBorrow",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"borrows",
+						"addBorrow"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "loadborrows by user id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/borrows/loadborrows/353e9762-bdb7-4a32-8183-75ae0dbe62a3",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"borrows",
+						"loadborrows",
+						"353e9762-bdb7-4a32-8183-75ae0dbe62a3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "removeBorrow",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "    {\r\n            \"id\": \"9d00fa47-f953-4df3-af82-e4c5e113d5d1\",\r\n            \"userId\": \"8c96d4b2-8639-40f5-ab00-f5d3d2dcf0d9\",\r\n            \"bookId\": \"61d8983c-8b8a-4b9b-b0e6-9659d5f06854\",\r\n            \"startDate\": \"2025-11-1\",\r\n            \"endDate\": \"2025-11-23\"\r\n        }"
+				},
+				"url": {
+					"raw": "localhost:8080/borrows/removeBorrow",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"borrows",
+						"removeBorrow"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

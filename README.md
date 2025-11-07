@@ -15,14 +15,11 @@ The project includes three main parts:
 
 ---
 
-
-[[_TOC_]]
 ## 🚀 Technologies Used
 
 - **Java 17+**
 - **Spring Boot 3+**
 - **Spring Web**
-- **Lombok** *(optional, to reduce boilerplate code)*
 - **Maven**
 
 ---
@@ -37,6 +34,8 @@ The project includes three main parts:
 
 <small>📸 **Postman Screenshots:**</small>
 
+<small>Located in /ScreenShots/Users/</small>
+
 ---
 
 📘 **BooK Management**
@@ -50,6 +49,9 @@ The project includes three main parts:
 
 
 <small>📸 **Postman Screenshots:**</small>
+
+<small>Located in /ScreenShots/Books/</small>
+
 ---
 **🔄 Borrow Management**
 
@@ -58,7 +60,7 @@ The project includes three main parts:
 | Add Borrow                  | POST   | borrows/addBorrow    | Add a new borrow record             |
 | Remove Borrow               | DELETE | borrows/removeBorrow | Remove a borrow record              |
 | Load All Borrows            | GET    | borrows/loadborrows  | Get all borrow records              |
-| Load All Borrows By User Id | GET    | /borrows/{userId}    | Get all borrows for a specific user |
+| Load All Borrows By User Id | GET    | /loadborrows/{userId}    | Get all borrows for a specific user |
 
 📸 Postman Screenshots:
 
@@ -70,86 +72,9 @@ The project includes three main parts:
 * This project does not use a database — all data is hard coded inside the code.
 * You can easily extend it later to connect with a real database (e.g., MySQL, PostgreSQL).
 * All API endpoints were tested using Postman.
+* You can Import API JSON EndPoints to PostMan (the File included in project files)
 
 ---
-## 📁 Project Structure
-
-├───.idea
-├───.mvn
-│   └───wrapper
-├───ScreenShots
-├───src
-│   ├───main
-│   │   ├───java
-│   │   │   └───com
-│   │   │       └───moteadev
-│   │   │           └───Library_Management_API
-│   │   │               ├───books
-│   │   │               │   ├───data
-│   │   │               │   │   └───mock
-│   │   │               │   ├───dto
-│   │   │               │   ├───models
-│   │   │               │   ├───rest
-│   │   │               │   └───services
-│   │   │               ├───borrow
-│   │   │               │   ├───data
-│   │   │               │   ├───dto
-│   │   │               │   ├───model
-│   │   │               │   ├───rest
-│   │   │               │   └───service
-│   │   │               ├───users
-│   │   │               │   ├───data
-│   │   │               │   │   └───mock
-│   │   │               │   ├───dto
-│   │   │               │   ├───model
-│   │   │               │   ├───rest
-│   │   │               │   └───service
-│   │   │               └───util
-│   │   │                   └───response
-│   │   └───resources
-│   │       ├───static
-│   │       └───templates
-│   └───test
-│       └───java
-│           └───com
-│               └───moteadev
-│                   └───Library_Management_API
-└───target
-    ├───classes
-    │   └───com
-    │       └───moteadev
-    │           └───Library_Management_API
-    │               ├───books
-    │               │   ├───data
-    │               │   │   └───mock
-    │               │   ├───dto
-    │               │   ├───models
-    │               │   ├───rest
-    │               │   └───services
-    │               ├───borrow
-    │               │   ├───data
-    │               │   ├───dto
-    │               │   ├───model
-    │               │   ├───rest
-    │               │   └───service
-    │               ├───users
-    │               │   ├───data
-    │               │   │   └───mock
-    │               │   ├───dto
-    │               │   ├───model
-    │               │   ├───rest
-    │               │   └───service
-    │               └───util
-    │                   └───response
-    ├───generated-sources
-    │   └───annotations
-    ├───generated-test-sources
-    │   └───test-annotations
-    └───test-classes
-        └───com
-            └───moteadev
-                └───Library_Management_API
-
 
 ## 👨‍💻 Author
 * Name: Motea Ghalib Ali Aljaberi
